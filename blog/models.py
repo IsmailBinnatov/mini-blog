@@ -7,6 +7,7 @@ class Post(models.Model):
     description = models.TextField('Текст записи')
     author = models.CharField('Автор', max_length=100)
     created_at = models.DateField('Дата публикации', auto_now_add=True)
+    img = models.ImageField('Изображение', upload_to='image/%Y', null=True, blank=True)
 
     def __str__(self):
         return f'{self.title} - {self.author}'

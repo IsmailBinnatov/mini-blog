@@ -30,7 +30,7 @@
 					{% for post in posts %}					
 					<div class="item">
 						<div class="image left">
-							<a href="#"><img src="css/images/project01.jpg" alt="" /></a>
+							<a href="#"><img src="{{ post.img.url }}" width="190px" alt="" /></a>
 						</div>
 						<div class="text left">
 							<h4>{{ post.title }}</h4>
