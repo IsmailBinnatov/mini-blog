@@ -25,21 +25,17 @@
 			<div id="content" class="left">
 				
 				<div class="projects">
-					<h3>Записи</h3>
-
-					{% for post in posts %}					
+					<h3>{{ post.title }}</h3>
+                    <p align='center'>
+                        <img src="{{ post.img.url }}" width="50%" alt="" />
+                    </p>					
 					<div class="item">
-						<div class="image left">
-							<a href="#"><img src="{{ post.img.url }}" width="190px" alt="" /></a>
-						</div>
 						<div class="text left">
-							<h4><a href="{{ post.id }}">{{ post.title }}</a></h4>
 							<p>{{ post.description }}</p>
 							<p>Автор: {{ post.author }}</p>
 						</div>
 						<div class="cl">&nbsp;</div>
 					</div>
-					{% endfor %}
 
 				</div>
 			</div>
